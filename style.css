@@ -16,6 +16,18 @@ body {
   text-align: center;
   width: 400px;
   box-shadow: 0 0 20px rgba(255,255,255,0.05);
+  animation: fadeInZoom 0.6s ease-out;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .pfp {
@@ -32,23 +44,44 @@ h1 {
   margin-bottom: 28px;
 }
 
-
 p {
   color: #aaa;
   margin-bottom: 10px;
 }
 
-.links a {
-  display: block;
-  background: #333;
-  color: white;
-  text-decoration: none;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 10px;
-  transition: background 0.2s ease;
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.links a:hover {
-  background: #555;
+.social-btn {
+  background: #2b2b2b;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  border: 2px solid #555;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 0 transparent;
+  flex-shrink: 0;
+}
+
+.social-btn i {
+  pointer-events: none;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.social-btn:hover {
+  background: #444;
+  transform: scale(1.15);
+  box-shadow: 0 0 8px rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
 }
